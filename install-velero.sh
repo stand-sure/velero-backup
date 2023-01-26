@@ -1,0 +1,2 @@
+#! /bin/bash
+velero install --provider aws --plugins velero/velero-plugin-for-aws --bucket velero --secret-file ../velero/credentials-velero --use-volume-snapshots=false --backup-location-config region=minio,s3ForcePathStyle=true,s3Url=http://macbook-pro.lan:9000

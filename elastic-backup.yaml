@@ -1,0 +1,16 @@
+apiVersion: velero.io/v1
+kind: Backup
+metadata:
+  labels:
+    velero.io/storage-location: default
+  name: elastic-backup
+  namespace: velero
+spec:
+  csiSnapshotTimeout: 10m0s
+  defaultVolumesToFsBackup: false
+  hooks: {}
+  includedNamespaces:
+  - elastic-system
+  metadata: {}
+  storageLocation: default
+  ttl: 720h0m0s
